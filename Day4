@@ -1,0 +1,97 @@
+import random
+import math
+"""
+用for循环实现1~100求和
+
+"""
+sum = 0
+for i in list(range(101)):
+    sum = sum +i
+
+print(sum)
+
+
+"""
+range可以用来产生一个不变的数值序列，而且这个序列通常都是用在循环中的，例如：
+
+range(101)可以产生一个0到100的整数序列。
+range(1, 100)可以产生一个1到99的整数序列。
+range(1, 100, 2)可以产生一个1到99的奇数序列，其中的2是步长，即数值序列的增量。
+
+
+
+用for循环实现1~100之间的偶数求和
+
+"""
+sum = 0
+for i in range(101):
+    if i%2 == 0:
+        sum = sum +i
+print(sum)
+
+
+"""
+
+猜数字游戏
+计算机出一个1~100之间的随机数由人来猜
+计算机根据人猜的数字分别给出提示大一点/小一点/猜对了
+
+"""
+
+ans = random.randint(1,100)
+cnt = 0
+while 1 :
+
+    a = int(input("请输入数字:"))
+    cnt = cnt +1
+    if a > ans :
+        print("小一点")
+    elif a < ans :
+        print("大一点")
+    else:
+        print("猜对了！")
+        break
+
+if cnt >= 7 :
+    print("回炉重造吧。")
+
+
+
+
+
+
+"""
+输入一个正整数判断它是不是素数
+"""
+a = int(input('请输入一个正整数:'))
+b = int(math.sqrt(a))
+is_prime = True
+for i in range(2,b+1):
+    if a%i == 0 :
+        is_prime = False
+        break
+if is_prime == False and a!=1:
+    print('%d不是素数'%a)
+else:
+    print('%d是素数'%a)
+
+
+
+
+"""
+
+输入两个正整数计算最大公约数和最小公倍数
+
+
+"""
+
+x = int(input('x = '))
+y = int(input('y = '))
+if x > y:
+    (x, y) = (y, x)
+for factor in range(x, 0, -1):
+    if x % factor == 0 and y % factor == 0:
+        print('%d和%d的最大公约数是%d' % (x, y, factor))
+        print('%d和%d的最小公倍数是%d' % (x, y, x * y // factor))
+        break
+
