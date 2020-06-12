@@ -1,0 +1,50 @@
+import math
+
+"""
+百分制成绩转等级制成绩
+90分以上    --> A
+80分~89分    --> B
+70分~79分	   --> C
+60分~69分    --> D
+60分以下    --> E
+
+"""
+
+score = int(input('请输入成绩：'))
+if score >= 90 :
+    grade = 'A'
+elif score >= 80 :
+    grade = 'B'
+elif score >= 70 :
+    grade = 'C'
+elif score >= 60 :
+    grade = 'D'
+elif score >= 60:
+    grade = 'E'
+else:
+    grade = 'Failed'
+
+print('Your grade is:',grade)
+
+
+"""
+
+判断输入的边长能否构成三角形
+如果能则计算出三角形的周长和面积
+
+
+"""
+a = int(input('请输入第一条边'))
+b = int(input('请输入第二条边'))
+c = int(input('请输入第三条边'))
+if a+b>c and a+c>b and b+c>a :
+    print('Loop is:',a+b+c)
+
+    p = (a+b+c)/2
+    area = math.sqrt(p*(p-a)*(p-b)*(p-c))
+    print('Square is',area)
+
+else:
+    pass
+
+
