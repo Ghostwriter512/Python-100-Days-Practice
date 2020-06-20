@@ -91,3 +91,6 @@ def GetPrime(n):
     return lis
 
 print(GetPrime(100))
+
+
+#new thought https://code.visualstudio.com/api/working-with-extensions/continuous- 
